@@ -1,9 +1,10 @@
 <?php
 // Originally viewed on https://www.youtube.com/watch?v=jCqIr_tBLKs
 
-require_once ("tree.php");
+require_once ("../../../binary-tree/binary-tree-builder.php");
 
-$root = buildBinaryTree();
+$a = [1, 2, 3, null, 5, null, 4];
+$root = buildBinaryTreeFromArray($a);
 
 $visibleValues = [];
 

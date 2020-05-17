@@ -1,17 +1,19 @@
 <?php
-require_once ("tree.php");
+require_once ('../binary-tree/binary-tree-builder.php');
+$a = ['A','B','C','D','E','F','G'];
+var_dump(postOrderIterative(buildBinaryTreeFromArray($a)));
 
-function postOrderIterative($tree) {
+function postOrderIterative($root) {
     $values = [];
-    if (!$tree) {
+    if (!$root) {
         return $values;
     }
 
     $stack = [];
-    $stack[] = $tree;
+    $stack[] = $root;
     while(!empty($stack)) {
         $current = array_pop($stack);
-        array_unshift($values, $current->value);
+        array_unshift($values, $current->val);
         if ($current->left) {
             $stack[] = $current->left;
         }
@@ -23,5 +25,3 @@ function postOrderIterative($tree) {
 
     return $values;
 }
-
-echo join('', postOrderIterative($tree));

@@ -1,20 +1,20 @@
 <?php
-require_once ('tree.php');
+require_once ('../binary-tree/binary-tree-builder.php');
+$a = ['A','B','C','D','E','F','G'];
+postOrder(buildBinaryTreeFromArray($a));
 
-function postOrder($tree) {
-    if (!$tree) {
+function postOrder($root) {
+    if (!$root) {
         return;
     }
 
-    if ($tree->left) {
-        postOrder($tree->left);
+    if ($root->left) {
+        postOrder($root->left);
     }
 
-    if ($tree->right) {
-        postOrder($tree->right);
+    if ($root->right) {
+        postOrder($root->right);
     }
 
-    echo $tree->value;
+    echo $root->val;
 }
-
-postOrder($tree);

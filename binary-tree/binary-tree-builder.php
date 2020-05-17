@@ -1,6 +1,6 @@
 <?php
 // Example array - [4, 2, 7, 1, 3, 6, 9]
-function buildTreeFromArray($a)
+function buildBinaryTreeFromArray($a)
 {
     if (!$a) {
         return null;
@@ -49,7 +49,7 @@ function buildTreeFromArray($a)
     return $head;
 }
 
-function bfsTree($head) {
+function bfsBinaryTree($head) {
     if (!$head) {
         return [];
     }
