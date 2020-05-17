@@ -1,7 +1,7 @@
 <?php
 // Originally viewed on https://www.youtube.com/watch?v=Hg82DzMemMI
 
-require_once ("../../../binary-tree/binary-tree-builder.php");
+require_once ("../../binary-tree/binary-tree-builder.php");
 
 $a = [5, 4, 8, 11, null, 13, 4, 7, 2, null, 1];
 
