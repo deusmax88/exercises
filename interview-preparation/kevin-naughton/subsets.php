@@ -1,5 +1,5 @@
 <?php
-// Originall viewed on https://www.youtube.com/watch?v=LdtQAYdYLcE&list=PLi9RQVmJD2fZgRyOunLyt94uVbJL43pZ_&index=36
+// Original viewed on https://www.youtube.com/watch?v=LdtQAYdYLcE&list=PLi9RQVmJD2fZgRyOunLyt94uVbJL43pZ_&index=36
 
 $n = [1,2,3];
 
