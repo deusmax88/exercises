@@ -35,7 +35,7 @@ foreach($ah as $num => $times) {
 
 var_dump($rotations);
 
-// Kevin's solution
+// Kevin's solution is better because it doesn't needs additional memory
 $minSwaps = min(
     minSwaps($a[0], $a, $b),
     minSwaps($a[0], $b, $a),
