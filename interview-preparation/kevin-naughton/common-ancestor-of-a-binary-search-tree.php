@@ -1,6 +1,6 @@
 <?php
 // Originally viewed on https://www.youtube.com/watch?v=kulWKd3BUcI&list=PLi9RQVmJD2fZgRyOunLyt94uVbJL43pZ_&index=12&t=0s
-require_once ("../../binary-tree/binary-tree-builder.php");
+require_once (__DIR__."/../../binary-tree/binary-tree-builder.php");
 
 $a = [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5];
 $head = buildBinaryTreeFromArray($a);
