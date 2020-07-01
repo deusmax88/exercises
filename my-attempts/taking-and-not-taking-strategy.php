@@ -2,24 +2,18 @@
 
 $a = [1,2,3];
 
-$result = [];
+$subsets = [];
 
-function strategy(&$a, $start, $current)
-{
-    if ($start == count($a)) {
-        global $result;
-        $result[] = $current;
-        return;
-    }
+generateSubSets($a, 0,$subsets);
 
-    for($i = $start; $i < count($a); $i++) {
+function generateSubSets(&$a, $index, &$subsets, $current = []) {
+    $subsets[] = $current;
+
+    for($i = $index; $i < count($a); $i++) {
         $current[] = $a[$i];
-        strategy($a, $i + 1, $current);
+        generateSubSets($a, $i + 1, $subsets, $current);
         array_pop($current);
     }
 }
 
-$current = [];
-strategy($a, 0, $current);
-
-var_dump($result);
+var_dump($subsets);
