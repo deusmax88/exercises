@@ -34,7 +34,7 @@ function buildBinaryTree($a)
             $queue[] = $rightNode;
         }
         else {
-            $queue = null;
+            $queue[] = null;
         }
 
     }
