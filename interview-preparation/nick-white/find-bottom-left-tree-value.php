@@ -14,6 +14,7 @@ $prevLevel = -1;
 $leftmostValue = null;
 findBottomLeftTreeValue($t);
 var_dump($leftmostValue);
+var_dump(findBottomLeftVal($t));
 
 function findBottomLeftTreeValue($node, $level = 0, $check = false) {
     global $prevLevel;
@@ -30,4 +31,22 @@ function findBottomLeftTreeValue($node, $level = 0, $check = false) {
 
     findBottomLeftTreeValue($node->left, $level + 1, true);
     findBottomLeftTreeValue($node->right, $level + 1, false);
+}
+
+// To me is seems that solution by Nick White is more elegant
+
+function findBottomLeftVal($node) {
+    $queue = [];
+    $queue[] = $node;
+    while (!empty($queue)) {
+        $node = array_shift($queue);
+        if (!is_null($node->right)) {
+            $queue[] = $node->right;
+        }
+        if (!is_null($node->left)) {
+            $queue[] = $node->left;
+        }
+    }
+
+    return $node->val;
 }
