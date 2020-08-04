@@ -61,6 +61,8 @@ for ($i = 0; $i < $N; $i++) {
 }
 
 // This topological sort uses DFS traversal
+// This looks like original DFS but with
+// capturing visited nodes
 function topologicalSortDFS($currentVertex, $N, $adj) {
     global $visited;
     global $T;
