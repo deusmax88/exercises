@@ -131,4 +131,9 @@ while (count($mstSet) < 9) {
     updateAdjacentVertexKeys($v, $mstSet);
 }
 
+// For minimum spanning tree number of edges should be
+// count($V) - 1, i.e. number of vertexes minus 1
+
+echo count($mstEdges); // 8 for our graph - we've found minimum spanning tree
+
 echo "finished";
